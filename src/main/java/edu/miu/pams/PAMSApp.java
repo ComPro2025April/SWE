@@ -21,6 +21,7 @@ public class PAMSApp {
         var app = new PAMSApp();
         var customers = app.customerRepository.getAllCustomers();
 
+        System.out.println("Customers:");
         Arrays.sort(customers, Comparator.comparing(Patient::getDateOfBirth));
 
         try {
